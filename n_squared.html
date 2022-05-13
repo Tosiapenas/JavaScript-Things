@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 1 - Learning JS in the pratice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function Square(){
+            var numbers = document.getElementById("txtNumbers").value;
+            numbers = numbers.split(",");
+            for(i=0; i < numbers.length; i++){
+                square = parseInt(numbers[i])*parseInt(numbers[i]);
+                document.write(""+numbers[i]+ " Squared is "+square+"<br>");
+            }             
+          }
+        </script>
+    </head>
+    <body>
+        Numbers<input type="text" id="txtNumbers">
+        <input type="button" value="Calculate Square" onclick="Square()">
+        Remember: Several numbers must be separated by ","<type="text" id="txtNumbers">
+        
+    </body>
+</html>
