@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biggest value - Second Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function verify(){
+            numbers = document.getElementById("txtNumbers").value;
+            numbers = numbers.split(",");
+            var biggest = parseInt(numbers[0]);
+            for(i = 1; i < numbers.length; i++){
+                if(parseInt(numbers[i]) > biggest){
+                    biggest = parseInt(numbers[i]);
+                }
+            }
+            alert("Biggest Value: "+biggest);
+            
+            }
+        </script>
+    </head>
+    <body>
+
+        Numbers:<input type="text" id="txtNumbers">
+        <input type="button" value=" Who's the biggest?" onclick="verify()">
+        
+    </body>
+</html>
