@@ -1,0 +1,142 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #27282c;
+  gap: 60px;
+
+}
+.game_screen {
+
+  width: 90%;
+  height: 600px;
+  border-bottom: 15px solid rgb(35, 160, 35);
+  border: 1px solid rgb(255, 255, 255);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87CEEB, #E0F6FF);
+
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 90px;
+  animation: pipe_mov 2.5s infinite linear;
+}
+
+.sonic {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+.clouds {
+
+  width: 550px;
+  position: absolute;
+  animation: clouds_mov 10s infinite linear;
+
+}
+
+.jump {
+
+  animation: sonic_jump 500ms ease-out;
+
+}
+
+.jump_end{
+
+   animation: sonic_gameover 500ms ease-out;
+}
+
+@keyframes pipe_mov {
+  from{
+    right: -90px;
+  }
+
+to{
+  right: 100%;
+}
+
+}
+
+@keyframes sonic_jump {
+
+  0% {
+    bottom: 0;
+  }
+  
+  40% {
+    bottom: 210px;
+  }
+
+  50%{
+    bottom: 210px;
+  }
+
+  60% {
+    bottom: 210px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes sonic_gameover {
+
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 210px;
+  }
+  
+  40% {
+    bottom: 210px;
+  }
+
+  50%{
+    bottom: 210px;
+  }
+
+  60% {
+    bottom: 210px;
+  }
+
+  70% {
+    bottom: 210px;
+  }
+
+  80% {
+    bottom: 210px;
+  }
+
+  100% {
+    bottom: -140px;
+  }
+}
+
+@keyframes clouds_mov {
+
+  from{
+    right: -600px;
+  }
+
+  to{
+    right: 100%;
+  }
+}
